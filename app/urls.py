@@ -1,7 +1,7 @@
 from django.urls import path, include
-from app.views import index
+from app.views import register_page
 
 
 urlpatterns = [
-    path('', index, name='home')
+    path('', register_page, name='register')
 ]
