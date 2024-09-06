@@ -1,12 +1,20 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auth</title>
+    <link rel="stylesheet" href={% static "assets/signup.css" %}>
+    <link rel="stylesheet" href={% static "assets/main.css" %}>
     {% load bootstrap5 %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
+    <style>
+        body {
+            background-color: gray;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
