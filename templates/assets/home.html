@@ -1,0 +1,8 @@
+{% extends "index.html" %}
+{% block content %}
+    {% for message in messages %}
+    <p class="alert alert-success">{{ message }}</p>
+    {% endfor %}
+    <h2>home page</h2>
+    <a href="{% url 'logout' %}">logout?</a>
+{% endblock content %}

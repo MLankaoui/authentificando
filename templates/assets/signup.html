@@ -4,6 +4,9 @@
     <form method="POST" action="">
         {% csrf_token %}
         <div class="form_container">
+            {% for message in messages %}
+                <p class="alert alert-success">{{ message }}</p>
+            {% endfor  %}
             <h2>Register</h2>
 
             <!-- Username Field -->
@@ -56,6 +59,7 @@
 
             <!-- Submit Button -->
             <button type="submit" class="btn btn-success">Create Account</button>
+            <p> already have an account yet? <a href="{% url 'login' %}">login</a></p>
         </div>
     </form>
 {% endblock content %}
