@@ -1,5 +1,5 @@
 from django.urls import path, include
-from auth.views import index
+from app.views import index
 
 
 urlpatterns = [
