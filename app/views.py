@@ -1,10 +1,11 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth.forms import UserCreationForm
+from app.forms import createUserForm
 
 def register_page(request):
-    form = UserCreationForm()
+    form = createUserForm()
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = createUserForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('login')  # Redirect to the login page or another page after successful registration
